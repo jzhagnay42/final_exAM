@@ -1,0 +1,2 @@
+class Boatcomment < ApplicationRecord
+end

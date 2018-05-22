@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+
+
+<header class="subnav-hero-section">
+  <h1 class="subnav-hero-headline">Motor Yachts <small></small></h1>
+  <ul class="subnav-hero-subnav">
+    <li><a href="#">Take Action!</a></li>
+    <li><a href="#" class="is-active">Carpe Diem!</a></li>
+    <li><a target="_blank" href="https://www.hatterasyachts.com/media/1502/motor-yachts-header.jpg?width=1903
+">Just do it!</a></li>
+  </ul>
+</header>
+
+<div class="marketing-site-content-section">
+  <div class="marketing-site-content-section-img">
+    <img src="https://www.hatterasyachts.com/media/2198/23_pana_ad2_v4finalcropped.jpg" alt="" />
+  </div>
+  <div class="marketing-site-content-section-block">
+    <h3 class="marketing-site-content-section-block-header">VISIONARY DESIGN BEYOND EXPECTATIONS</h3>
+    <p class="marketing-site-content-section-block-subheader subheader">On the bow of a Hatteras yacht, adventure lines the horizon and inhibitions are left in your wake. Through 60 years of signature innovation and design, Hatteras has crafted a legacy to which all others aspire. Every yacht utilizes bold form to merge indoor and outdoor spaces for ample entertainment areas, while skylights and windows bring cavernous staterooms to life. From their maiden voyage to every journey thereafter, Hatteras yachts deliver on the promise of a life without limits.</p>
+    <a href="#" class="round button small">learn more</a>
+  </div>
+  <div class="marketing-site-content-section-block small-order-2 medium-order-1">
+    <h3 class="marketing-site-content-section-block-header">EXPERIENCE THE M90 PANACERA</h3>
+    <p class="marketing-site-content-section-block-subheader subheader"></p>
+    <a href="#" class="round button small">learn more</a>
+  </div>
+  <div class="marketing-site-content-section-img small-order-1 medium-order-2">
+    <img src="http://imt.boatwizard.com/images/1/87/8/5848708_20160623075838521_1_XLARGE.jpg" alt="" />
+  </div>
+</div>
+
+
+
+
+<h1>Boatcomments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boatcomments.each do |boatcomment| %>
+      <tr>
+        <td><%= boatcomment.name %></td>
+        <td><%= boatcomment.comment %></td>
+        <td><%= link_to 'Show', boatcomment %></td>
+        <td><%= link_to 'Edit', edit_boatcomment_path(boatcomment) %></td>
+        <td><%= link_to 'Destroy', boatcomment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Boatcomment', new_boatcomment_path %>
